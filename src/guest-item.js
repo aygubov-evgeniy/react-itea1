@@ -17,10 +17,10 @@ class GuestItem extends Component {
 		const { checkGuest } = this;
 
 		return (
-			<li className={ arrived ? "guests-list__item guests-list__item_arrived" : "guests-list__item" }>
+			<li className={ arrived ? "list-group-item arrived" : "list-group-item" }>
 				{ guest.name }
 
-				<input type="radio" onChange={checkGuest} />
+				<input type="checkbox" onChange={checkGuest} />
 			</li>
 		);
 	}

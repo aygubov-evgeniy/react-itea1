@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from './guests.json';
+import "./bootstrap.min.css";
 import './App.css';
 
 import GuestItem from './guest-item.js';
@@ -31,12 +32,12 @@ class GuestList extends Component {
     return (
       <div className="App">
         <h1>Guests List</h1>
-        <input placeholder="Search guests" onChange={searchGuests} />
+        <input placeholder="Search guests" className="form-control" onChange={searchGuests} />
 
         {
           users.length !== 0 ?
           (
-            <ul className="guests-list">
+            <ul className="list-group">
               {
                 users.map( (guest, key) => 
                 <GuestItem
